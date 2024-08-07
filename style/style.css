@@ -264,17 +264,17 @@ body {
     align-items: center;
 }
 .info-img {
-    width: 50%;
+    width: 100%;
 }
 .info-img img {
-    width: 500px;
-    height: 250px;
+    width: 100%;
+    
 }
 .info-txt {
     width: 50%;
 }
 .info-txt h2 {
-    font-size: 75px;
+    font-size: 35px;
     color: #ffff;
     font-weight: 800;
     text-transform: uppercase;
