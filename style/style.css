@@ -147,6 +147,9 @@ h2,
     padding: 2rem;
     background-color: #e7e2d8d2;
 }
+.info-bar {
+    text-align: center;
+}
 
 .text-section {
     text-align: center;
@@ -162,9 +165,16 @@ h2,
     width: 50px;
     margin-top: 2rem;
 }
+.info-bar p, .content p {
+    color: #000;
 
+}
+.content h4 + h1 + p {
+    margin-top: 15px;
+
+}
 .content {
-    text-align: left;
+    text-align: center;
 }
 .content a {
     display: block;
@@ -194,7 +204,12 @@ h2,
     text-align: left;
     padding: 2rem;
 }
-
+.menu-1 h2  {
+    color: #000;
+}
+.menu-1 p  {
+    color: #000;
+}
 .menu-item img {
     max-width: 100%;
 }
@@ -241,7 +256,7 @@ h2,
 
 .price p {
     font-size: 39px;
-    color: #1a5112;
+    color: #e6854d;
     font-weight: bold;
     white-space: nowrap;
 }
@@ -422,6 +437,7 @@ h2,
     background-color: transparent; /* Fondo transparente */
     color: #ffffff; /* Color del texto */
     border: 2px solid #e2e2e2; /* Borde */
+    margin-bottom: 4rem;
 }
 
 .btn-1:hover, .btn-2:hover {
@@ -429,20 +445,124 @@ h2,
     border-color: #ff4500; /* Color del borde al pasar el mouse */
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
+/*---footer----*/
+.footer {
+    background-color: #f6f4f1;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
 
+
+.logo-foooter {
+    display: flex;
+    margin: 0;
+    text-align: center;
+}
+
+.logo-footer img {
+    width: 24px;
+}
+
+.logo-footer span {
+    font-size: 18px;
+    font-weight: bold;
+}
+.container-footer p {
+    color: #000;
+}
+.newsletter {
+    margin: 20px 0;
+
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px;
+}
 
 
 @media (min-width: 1024px) {
-    .content-section {
-        width: 1200px;
-        padding-left: 120px;
-        display: flex;
-        background-color: #ffeecde1;
+    .hero {
+        min-height: 80vh;
+        padding: 8px 12rem;
     }
-    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .open-menu, .close-menu, .mobile-menu__nav {
+        display: none;
+    }
+    .desktop-menu {
+        display: block;
+    }
+
+    .desktop-menu ul {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+    }
+    .desktop-menu ul li a {
+        color: #fff;
+        font-size: 1rem;
+    }
+    .hero__content {
+        flex-grow: 1;
+        display: flex;
+        position: relative;
+    }
+    .hero__content-title {
+        max-width: 500px;
+    }
+    /*----segunda secciom---*/
+    .content-section {
+        display: flex;
+        background-color: #e7e2d8d2;
+        gap: 2rem;
+        align-items: center;
+    }
     .image-section {
+        margin-top: 19px;
+    }
+    .image-section img {
+        display: block;
         flex: 1;
         overflow: hidden;
+        margin: 0;
     }
     
     .burger-image {
@@ -453,14 +573,10 @@ h2,
     }
     
     .text-section {
-        background-color: #ffeecde1;
-        margin-top: -150px;
         flex: 1;
-        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        z-index: 1000;
     }
     .img-text-section {
         background-image: url(../img/hamburger-with-cheese-2874979.jpg);
@@ -469,28 +585,33 @@ h2,
     }
     
     .info-bar {
+        position: absolute;
+        z-index: 2;
+        margin-top: -60px;
+        margin-left: 700px;
         display: flex;
-        justify-content: space-between;
-    
+        background-color: white; /* Asegúrate de que tenga un fondo para que la superposición sea visible */
+        padding: 10px 70px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra si quieres que resalte más */
     }
     
     .hours, .contact {
         margin-bottom: 20px;
     }
-    
+    .content {
+        text-align: left;
+    }
     .content h4 {
         font-weight: 300;
         letter-spacing: 1px;
         margin-bottom: 10px;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
-    .content img {
-        width: 45px;
-    }
+    
     .content h1 {
         font-size: 48px;
         margin: 0;
-        margin-top: 5rem;
+        margin-top: 2rem;
         margin-bottom: 20px;
     }
     
@@ -503,6 +624,7 @@ h2,
     .btn {
         display: inline-block;
         padding: 10px 20px;
+        max-width: 400px;
         background-color: #000;
         color: #fff;
         text-decoration: none;
@@ -514,6 +636,29 @@ h2,
         background-color: #333;
     }
     /*item menu----*/
+    
+    .menu-1 {
+        max-width: 600px; /* Ajusta este valor según lo que necesites */
+        margin: 0 auto; /* Centra el contenedor horizontalmente */
+        text-align: center; /* Centra el texto */
+        padding: 6rem; /* Añade espacio alrededor del texto */
+    }
+    
+    .menu-1 h3 {
+        font-size: 20px; /* Ajusta el tamaño de la fuente */
+        margin-bottom: 10px;
+    }
+    
+    .menu-1 h2 {
+        font-size: 24px; /* Ajusta el tamaño de la fuente */
+        margin-bottom: 15px;
+    }
+    
+    .menu-1 p {
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+        line-height: 1.5; /* Ajusta el espaciado entre líneas */
+    }
+    
     .menu-item {
         display: flex;
         align-items: center;
@@ -537,7 +682,6 @@ h2,
         height: 500px;
         margin-top: 9rem;
         margin-left: 27rem;
-        margin-bottom: 12rem;
     }
     
     .category {
@@ -604,6 +748,77 @@ h2,
         background-position: center;
         grid-column: span 1; /* Ocupa 1 columna */
         grid-row: span 1;    /* Ocupa 1 fila */
+    }
+
+    .price p {
+        font-size: 39px;
+        color: #e6854d;
+    }
+
+
+    /*---footer----*/
+    .footer {
+        background-color: #f6f4f1;
+        padding: 20px;
+        text-align: center;
+        border-top: 1px solid #ddd;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    .logo img {
+        width: 24px;
+        margin-right: 8px;
+    }
+    
+    .logo span {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .newsletter {
+        margin: 20px 0;
+    }
+    
+    .newsletter input[type="email"] {
+        padding: 10px;
+        width: 300px;
+        max-width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-right: 10px;
+    }
+    
+    .newsletter button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .social-icons {
+        margin-top: 20px;
+    }
+    
+    .social-icons a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+    
+    .social-icons img {
+        width: 24px;
     }
     
 }
