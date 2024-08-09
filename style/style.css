@@ -548,6 +548,43 @@ h2,
     .hero__content-title {
         max-width: 500px;
     }
+    /*----carrito-----*/
+    .mdp-float {
+        position: absolute;
+        z-index: 999999;
+        border-radius: 50%;
+        top: 50px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+        transition: .75s;
+        transition-timing-function: ease-out;
+    }
+    .mdp-float-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        text-shadow: 1px 0 0 var(--hmp-color);
+        background-image: linear-gradient(210deg,var(--hmp-color-5) 0,var(--hmp-color-25) 100%);
+        background-color: #fff;
+        transition: .25s;
+        box-shadow: 0 7px 13px -3px var(--hmp-color-25),0 2px 4px 0 var(--hmp-color-50),inset 0 0 0 0 var(--hmp-color);
+        position: relative;
+        z-index: 1;
+    }
+    .mdp-float-btn svg {
+        width: 16.66667px;
+        height: 16.66667px;
+        fill: var(--hmp-color);
+        z-index: 2;
+    }
+
+
+
+
     /*----segunda secciom---*/
     .content-section {
         display: flex;
@@ -619,6 +656,7 @@ h2,
         font-size: 18px;
         margin-bottom: 20px;
         line-height: 1.6;
+        max-width: 500px;
     }
     
     .btn {
@@ -643,14 +681,17 @@ h2,
         text-align: center; /* Centra el texto */
         padding: 6rem; /* Añade espacio alrededor del texto */
     }
+    .menu-1 img {
+        margin-bottom: 1rem;
+    }
     
     .menu-1 h3 {
-        font-size: 20px; /* Ajusta el tamaño de la fuente */
+        font-size: 15px; /* Ajusta el tamaño de la fuente */
         margin-bottom: 10px;
     }
     
     .menu-1 h2 {
-        font-size: 24px; /* Ajusta el tamaño de la fuente */
+        font-size: 32px; /* Ajusta el tamaño de la fuente */
         margin-bottom: 15px;
     }
     
@@ -658,9 +699,21 @@ h2,
         font-size: 16px; /* Ajusta el tamaño de la fuente */
         line-height: 1.5; /* Ajusta el espaciado entre líneas */
     }
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px; /* Ajusta el ancho máximo según tu necesidad */
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin-top: -70px;
+    }
     
     .menu-item {
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         padding: 20px;
@@ -673,15 +726,55 @@ h2,
         border-radius: 8px;
     }
     
+    .menu-items .btn {
+        margin-top: 3rem;
+    }
 
+    /*---- que hacemos----*/ 
+    .que-hacemos {
+        text-align: center; /* Centra el texto dentro de la sección */
+        padding: 20px;
+    }
+    
+    .carateristica-home {
+        max-width: 800px; /* Ajusta este valor según lo que necesites */
+        margin: 0 auto;
+        margin-bottom: 6rem;
+    }
+    
+    .carateristica-home img {
+        max-width: 100px; /* Ajusta el tamaño de la imagen */
+        margin-bottom: 20px;
+    }
+    .price p {
+        font-size: 39px;
+        color: #e6854d;
+    }
+    
+    .carateristica-home h4, .carateristica-home h2 {
+        margin-bottom: 10px;
+        margin-top: 12px;
+    }
+    .carateristica-home h4 {
+        font-size: 12px;
+    }
+    .carateristica-home p {
+        max-width: 600px; /* Establece un ancho máximo para el párrafo */
+        margin: 0 auto; /* Centra el párrafo dentro del contenedor */
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+        line-height: 1.5; /* Ajusta el espaciado entre líneas para mejorar la legibilidad */
+        padding: 10px 20px; /* Agrega espacio alrededor del texto */
+    }
+
+/* ------menu categoria-----*/
     .menu-categories {
         display: grid;
         grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
         grid-template-rows: auto;
         gap: 10px; /* Espacio entre los elementos */
         height: 500px;
-        margin-top: 9rem;
-        margin-left: 27rem;
+        margin-top: -95px;
+        margin-left: 12rem;
     }
     
     .category {
@@ -704,8 +797,11 @@ h2,
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: background-color 0.5s ease;
     }
-    
+    .overlay:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
     .overlay h2 {
         color: white;
         font-size: 24px;
@@ -715,46 +811,93 @@ h2,
     
     /* Especificando el tamaño de las imágenes usando grid */
     .category-1 {    
-        background-image: url(../img/amirali-mirhashemian-4x42w7f3gro-unsplash.jpg);
+        background-image: url(../img/alexander-mils-snlfvyml8os-unsplash.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        height: 250px;
         grid-column: span 1; /* Ocupa 1 columna */
         grid-row: span 1;    /* Ocupa 1 fila */
     }
     
     .category-2 {
-        background-image: url(../img/amirali-mirhashemian-4x42w7f3gro-unsplash.jpg);
+        background-image: url(../img/blur-bread-bun-burger-534285.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        height: 200px;
+        height: 250px;
         grid-column: span 2; /* Ocupa 2 columnas */
         grid-row: span 1;    /* Ocupa 1 fila */
     }
     
     .category-3 {
-        background-image: url(../img/amirali-mirhashemian-4x42w7f3gro-unsplash.jpg);
+        background-image: url(../img/fatima-akram-xhcogeodss-unsplash-2.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         grid-column: span 2; /* Ocupa 2 columnas */
+        height: 250px;
         grid-row: span 1;    /* Ocupa 2 filas */
     }
     
     .category-4 {
-        background-image: url(../img/amirali-mirhashemian-4x42w7f3gro-unsplash.jpg);
+        background-image: url(../img/thumbnail-section-testimonial-1.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         grid-column: span 1; /* Ocupa 1 columna */
+        height: 250px;
         grid-row: span 1;    /* Ocupa 1 fila */
     }
-
-    .price p {
-        font-size: 39px;
-        color: #e6854d;
+    /*----lo que ofrecemos--*/
+    .lo-que-ofrecemos {
+        text-align: center; /* Centra el texto dentro de la sección */
+        padding: 20px;
+        margin-top: 7rem;
+        cursor: pointer;
+        transition: background-color 0.5s ease;
     }
-
+    .lo-que-ofrecemos:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .lo-que-ofrecemos-1 {
+        max-width: 800px; /* Ajusta el ancho máximo del contenido */
+        margin: 0 auto; /* Centra el contenido horizontalmente */
+        padding: 20px;
+        transition: background-color 0.5s ease;
+    }
+    
+    .lo-que-ofrecemos-1 img {
+        max-width: 150px; /* Ajusta el tamaño de la imagen */
+        margin-bottom: 20px;
+    }
+    
+    .lo-que-ofrecemos-1 h4, .lo-que-ofrecemos-1 h2 {
+        margin-bottom: 10px;
+    }
+    
+    .lo-que-ofrecemos-1 p {
+        max-width: 600px; /* Establece un ancho máximo para el párrafo */
+        margin: 0 auto; /* Centra el párrafo dentro del contenedor */
+        font-size: 16px; /* Ajusta el tamaño de la fuente */
+        line-height: 1.5; /* Ajusta el espaciado entre líneas para mejorar la legibilidad */
+        padding: 10px 20px; /* Agrega espacio alrededor del texto */
+    }
+    .lo-que-ofrecemos-buttons {
+        display: flex;
+        justify-content: center; /* Centra los botones horizontalmente */
+        gap: 10px; 
+    }
+    
+    .btn-1, .btn-2 {
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 0;
+        transition: background-color 0.3s ease;
+    }
+    
 
     /*---footer----*/
     .footer {
@@ -763,7 +906,6 @@ h2,
         text-align: center;
         border-top: 1px solid #ddd;
     }
-    
     .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -775,10 +917,8 @@ h2,
         justify-content: center;
         margin-bottom: 10px;
     }
-    
-    .logo img {
-        width: 24px;
-        margin-right: 8px;
+    .logo-footer span {
+        font-size: 20px;
     }
     
     .logo span {
@@ -816,11 +956,16 @@ h2,
         margin: 0 10px;
         display: inline-block;
     }
-    
-    .social-icons img {
-        width: 24px;
+    .social-icons i {
+        background-color: #fffefe;
+        border-radius: 100%;
+        color: #000;
+        padding: 9px;
     }
-    
+    .social-icons i:hover {
+        background-color: #e6854d;
+        color: #fff;
+    }
 }
 
 
