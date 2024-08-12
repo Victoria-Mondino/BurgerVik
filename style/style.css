@@ -142,6 +142,10 @@ h2,
     color: #fff;
     font-size: 1.2rem;
 }
+/*----carrito-----*/
+.floating-cart {
+    display: none;
+}
 /*-----section segunda index----*/
 .content-section {
     padding: 2rem;
@@ -198,6 +202,7 @@ h2,
 }
 .menu img {
     width: 50px;
+    margin-top: 2rem;
 }
 .menu-item {
     flex-direction: column;
@@ -306,13 +311,9 @@ h2,
     color: #000;
 }
 
-.carateristica-home h2 {
-    font-size: 3rem;
-}
 /*----menu category---*/
 .menu-categories {
     gap: 10px; /* Espacio entre los elementos */
-    width: 100%;
     padding: 1rem;
 
 }
@@ -397,7 +398,7 @@ h2,
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, .5) ;
+    background-color: rgba(0, 0, 0, .7) ;
     z-index: -1;
 }
 .lo-que-ofrecemos img {
@@ -416,6 +417,7 @@ h2,
 .lo-que-ofrecemos h2 {
     font-size: 3rem;
 }
+
 .btn-1, .btn-2 {
     display: inline-block; /* Para comportarse como un botón */
     padding: 10px 20px; /* Espaciado interno */
@@ -423,6 +425,7 @@ h2,
     font-weight: bold; /* Negrita */
     text-align: center; /* Centrar el texto */
     text-decoration: none; /* Eliminar subrayado */
+    margin-top: 12px;
     border-radius: 5px; /* Bordes redondeados */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
 }
@@ -498,24 +501,24 @@ h2,
     cursor: pointer;
 }
 
-.social-icons {
-    margin-top: 20px;
-}
-
 .social-icons a {
     margin: 0 10px;
     display: inline-block;
 }
-
-.social-icons img {
-    width: 24px;
+.social-icons i {
+    color: #000;
+    padding: 9px;
+}
+.social-icons i:hover {
+    background-color: #e6854d;
+    color: #fff;
 }
 
 
 @media (min-width: 1024px) {
     .hero {
         min-height: 80vh;
-        padding: 8px 12rem;
+        padding: 8px 5rem;
     }
     .header {
         display: flex;
@@ -545,42 +548,46 @@ h2,
         display: flex;
         position: relative;
     }
+    
     .hero__content-title {
         max-width: 500px;
     }
-    /*----carrito-----*/
-    .mdp-float {
-        position: absolute;
-        z-index: 999999;
-        border-radius: 50%;
-        top: 50px;
-        right: 50px;
-        width: 50px;
-        height: 50px;
-        transition: .75s;
-        transition-timing-function: ease-out;
+    .hero__content-title h2 {
+        font-size: 2.5rem;
     }
-    .mdp-float-btn {
+    /*----carrito-----*/
+    .floating-cart {
+        display: block;
+        position: fixed; /* Fija el carrito en una posición fija en la pantalla */
+        bottom: 20px; /* Espacio desde el borde inferior */
+        right: 20px;  /* Espacio desde el borde derecho */
+        z-index: 1000; /* Asegura que el carrito esté por encima de otros elementos */
+    }
+    
+    .floating-cart-btn {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 50%;
         width: 50px;
         height: 50px;
-        text-shadow: 1px 0 0 var(--hmp-color);
-        background-image: linear-gradient(210deg,var(--hmp-color-5) 0,var(--hmp-color-25) 100%);
-        background-color: #fff;
-        transition: .25s;
-        box-shadow: 0 7px 13px -3px var(--hmp-color-25),0 2px 4px 0 var(--hmp-color-50),inset 0 0 0 0 var(--hmp-color);
-        position: relative;
-        z-index: 1;
+        border-radius: 50%;
+        background-color: #ff5722; /* Color de fondo del carrito */
+        color: #fff; /* Color del ícono */
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s;
     }
-    .mdp-float-btn svg {
-        width: 16.66667px;
-        height: 16.66667px;
-        fill: var(--hmp-color);
-        z-index: 2;
+    
+    .floating-cart-btn:hover {
+        background-color: #e64a19; /* Cambia el color cuando el usuario pasa el ratón sobre el carrito */
     }
+    
+    .floating-cart-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+    
 
 
 
@@ -626,9 +633,11 @@ h2,
         z-index: 2;
         margin-top: -60px;
         margin-left: 700px;
+        margin-right: 12px;
         display: flex;
+        gap: 20px;
         background-color: white; /* Asegúrate de que tenga un fondo para que la superposición sea visible */
-        padding: 10px 70px;
+        padding: 10px 5px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra si quieres que resalte más */
     }
     
@@ -674,7 +683,6 @@ h2,
         background-color: #333;
     }
     /*item menu----*/
-    
     .menu-1 {
         max-width: 600px; /* Ajusta este valor según lo que necesites */
         margin: 0 auto; /* Centra el contenedor horizontalmente */
@@ -682,16 +690,17 @@ h2,
         padding: 6rem; /* Añade espacio alrededor del texto */
     }
     .menu-1 img {
+        margin-top: 1rem;
         margin-bottom: 1rem;
     }
     
     .menu-1 h3 {
-        font-size: 15px; /* Ajusta el tamaño de la fuente */
+        font-size: 10px; /* Ajusta el tamaño de la fuente */
         margin-bottom: 10px;
     }
     
     .menu-1 h2 {
-        font-size: 32px; /* Ajusta el tamaño de la fuente */
+        font-size: 37px; /* Ajusta el tamaño de la fuente */
         margin-bottom: 15px;
     }
     
@@ -747,7 +756,7 @@ h2,
         margin-bottom: 20px;
     }
     .price p {
-        font-size: 39px;
+        font-size: 25px;
         color: #e6854d;
     }
     
@@ -774,7 +783,7 @@ h2,
         gap: 10px; /* Espacio entre los elementos */
         height: 500px;
         margin-top: -95px;
-        margin-left: 12rem;
+        padding: 0 8rem;
     }
     
     .category {
@@ -827,7 +836,7 @@ h2,
         background-position: center;
         height: 200px;
         height: 250px;
-        grid-column: span 2; /* Ocupa 2 columnas */
+        grid-column: span 3; /* Ocupa 2 columnas */
         grid-row: span 1;    /* Ocupa 1 fila */
     }
     
@@ -836,7 +845,7 @@ h2,
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        grid-column: span 2; /* Ocupa 2 columnas */
+        grid-column: span 3; /* Ocupa 2 columnas */
         height: 250px;
         grid-row: span 1;    /* Ocupa 2 filas */
     }
@@ -889,6 +898,7 @@ h2,
         display: flex;
         justify-content: center; /* Centra los botones horizontalmente */
         gap: 10px; 
+        margin-bottom: 7rem;
     }
     
     .btn-1, .btn-2 {
@@ -957,14 +967,30 @@ h2,
         display: inline-block;
     }
     .social-icons i {
-        background-color: #fffefe;
-        border-radius: 100%;
         color: #000;
         padding: 9px;
     }
     .social-icons i:hover {
         background-color: #e6854d;
         color: #fff;
+    }
+}
+
+@media (min-width: 1440px) {
+    .hero {
+        padding: 2rem 19rem;
+    }
+    .hero__content-title h2 {
+        font-size: 3rem;
+    }
+    .info-bar {
+        margin-left: 1000px;
+    }
+    .content-section {
+        padding: 0 0 0 19rem;
+    }
+    .menu-categories {
+        padding: 0 18rem 0 18rem;
     }
 }
 
