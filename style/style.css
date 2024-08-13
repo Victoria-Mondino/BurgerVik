@@ -637,7 +637,7 @@ h2,
         display: flex;
         gap: 20px;
         background-color: white; /* Asegúrate de que tenga un fondo para que la superposición sea visible */
-        padding: 10px 5px;
+        padding: 10px 9px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Añade una sombra si quieres que resalte más */
     }
     
@@ -677,6 +677,10 @@ h2,
         text-decoration: none;
         font-size: 16px;
         transition: background-color 0.3s ease;
+    }
+    .button-container {
+        text-align: left;
+
     }
     
     .btn:hover {
@@ -920,7 +924,7 @@ h2,
         max-width: 1200px;
         margin: 0 auto;
     }
-    
+
     .logo {
         display: flex;
         align-items: center;
@@ -984,7 +988,7 @@ h2,
         font-size: 3rem;
     }
     .info-bar {
-        margin-left: 1000px;
+        margin-left: 950px;
     }
     .content-section {
         padding: 0 0 0 19rem;
@@ -994,9 +998,60 @@ h2,
     }
 }
 
+@media only screen and (min-width: 600px) and (max-width: 1024px)  {
 
+    .menu-item {
+        flex-direction: row; /* Cambiar a fila para pantallas más grandes */
+        justify-content: center; /* Centra horizontalmente el contenido */
+        align-items: center;
+        text-align: center;
+    }
 
+    .menu-item img {
+        max-width: 50%; /* Ajusta el tamaño de la imagen */
+        margin-right: 1rem; /* Espacio entre la imagen y el texto */
+    }
 
+    .item-details h3 {
+        flex: 1; /* Ocupa el resto del espacio */
+        justify-content: center; /* Centra horizontalmente el contenido */
+        align-items: center;
+        text-align: center;
+    }
+
+    .item-details p {
+        padding: 0 4rem;
+    }
+
+    .price {
+        margin-left: 1rem; /* Espacio entre el texto y el precio */
+    }
+
+    .price p {
+        font-size: 1.2rem; /* Ajusta el tamaño del precio */
+    }
+    .btn {
+        display: inline-block; /* No ocupa toda la pantalla */
+        padding: 10px 20px; /* Espaciado interno */
+        font-size: 16px; 
+    }
+    .button-container {
+        display: flex; /* Utiliza flexbox para centrar */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;
+        margin-top: 3rem;
+    }
+    .menu-1 img {
+        margin-top: 8rem;
+    }
+    
+
+}
+@media only screen and (min-width: 1022px) and (max-width: 1340px)  {
+    .info-bar {
+        margin-left: 400px;
+    }
+}
 
 
 
