@@ -539,6 +539,15 @@ h2,
             gap: 2rem;
             padding: 2rem;
     }
+    .desktop-menu ul a {
+        transition: background-color 0.3s ease, padding 0.3s ease;
+    }
+    
+    .desktop-menu ul a:hover {
+        background-color: #adadad50;
+        padding: 9px;
+    }
+
     .desktop-menu ul li a {
         color: #fff;
         font-size: 1rem;
@@ -999,7 +1008,6 @@ h2,
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1024px)  {
-
     .menu-item {
         flex-direction: row; /* Cambiar a fila para pantallas más grandes */
         justify-content: center; /* Centra horizontalmente el contenido */
@@ -1047,11 +1055,12 @@ h2,
     
 
 }
-@media only screen and (min-width: 1022px) and (max-width: 1340px)  {
+@media only screen and (min-width: 1024px) and (max-width: 1340px)  {
     .info-bar {
-        margin-left: 400px;
+        margin-left: 500px;
     }
 }
+
 
 
 
