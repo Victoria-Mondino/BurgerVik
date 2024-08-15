@@ -987,6 +987,29 @@ h2,
         background-color: #e6854d;
         color: #fff;
     }
+    /*------PAGINA ABOUT------*/
+    .about {
+        background-image: url(../img/obi-onyeador-th7y_0dlur8-unsplash.jpg);
+        background-size: cover;
+        background-position: bottom;
+        min-height: 40vh;
+        padding: 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        isolation: isolate;
+    }
+    .about::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, .5) ;
+        z-index: -1;
+    }
+    
+
+
+
 }
 
 @media (min-width: 1440px) {
