@@ -1090,7 +1090,72 @@ h2,
         transition: opacity 0.3s ease;
     }
     
-    
+    .team {
+        background-color: #f4f4f4;
+        text-align: left;
+        padding: 2rem;
+    }
+    .meet-team {
+        margin: 5rem 0 0 5rem;
+    }
+    .meet-team img {
+        max-width: 60px;
+    }
+
+    .meet-team h2 {
+        margin-top: 2rem;
+        color: #000;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .meet-team h3 {
+        margin-top: 2rem;
+    }
+    .team-membres {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        padding: 5rem;
+        margin-top: 5rem;
+    }
+    .team-membres > div {
+        background-size: cover;
+        background-position: center;
+        height: 5rem;
+        padding: 1rem;
+        display: flex;
+        align-items: end;
+        position: relative;
+        isolation: isolate; 
+    }
+    .team-membres > div::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, .3) ;
+        z-index: -1;
+    }
+    .item-membres  {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start ;
+    }
+    .item-membres:nth-child(1) {
+        background-image: url(../img/person-holding-two-burgers-3630141.jpg);
+        width: 100%;
+        height: 500px;
+    }
+    .item-membres:nth-child(2) {
+        background-image: url(../img/person-holding-two-burgers-3630141.jpg);
+        width: 100%;
+        height: 500px;
+    }
+    .item-membres:nth-child(3) {
+        background-image: url(../img/person-holding-two-burgers-3630141.jpg);
+        width: 100%;
+        height: 500px;
+    }
 
 
 
