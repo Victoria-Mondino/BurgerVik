@@ -448,6 +448,147 @@ h2,
     border-color: #ff4500; /* Color del borde al pasar el mouse */
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
+/*------about--------*/
+
+.about-img img {
+    display: none;
+
+}
+.about-1-text {
+    padding: 2rem;
+}
+.about-1-text h2, p {
+    color: #000;
+}
+.features {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+.feature-item {
+    margin-bottom: 4rem;
+}
+.feature-item img {
+    margin-bottom: 12px;
+}
+.team,
+.team-membres {
+    background-color: #f4f4f4;
+}
+.team {
+    padding: 2rem;
+}
+.meet-team img {
+    width: 55px;
+    margin-bottom: 12px;
+}
+.meet-team h2 {
+    color: #000;
+}
+.team-membres {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.team-membres > div {
+    background-size: cover;
+    background-position: center;
+    height: 5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    isolation: isolate; 
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.team-membres > div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .3) ;
+    z-index: -1;
+}
+.item-membres p {
+    color: #fff;
+}
+
+.item-membres:nth-child(1) {
+    background-image: url(../img/person-holding-two-burgers-3630141.jpg);
+    width: 100%;
+    height: 500px;
+}
+.item-membres:nth-child(2) {
+    background-image: url(../img/foodiesfeed-com_toasting-squid-ink-black-burger-buns.jpg);
+    width: 100%;
+    height: 500px;
+}
+.item-membres:nth-child(3) {
+    background-image: url(../img/blur-bread-bun-burger-534285.jpg);
+    width: 100%;
+    height: 500px;
+}
+.numbers {
+    background-color: #1F1D16;
+    padding: 4rem;
+}
+.numeros {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.travelled p {
+    color: #fff;
+}
+.pictures {
+    padding: 2rem;
+}
+.img-pictures img, 
+.img-2 img,
+.img-3 img {
+    max-width: 100%;
+}
+.text {
+    margin-top: 2rem;
+}
+.text h2 {
+    color: #000;
+    margin-top: 12px;
+}
+.btn-about a {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Estilos personalizados */
+.btn-about a {
+    display: inline-block;
+    background-color: #fff; /* Cambia este color al que prefieras */
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover */
+.btn-about a:hover {
+    background-color: #000;
+    color: #fff; 
+    border: 1px solid #fff;
+}
+
 /*---footer----*/
 .footer {
     background-color: #f6f4f1;
@@ -614,6 +755,7 @@ h2,
     .image-section img {
         display: block;
         flex: 1;
+        max-width: 100%;
         overflow: hidden;
         margin: 0;
     }
@@ -906,6 +1048,7 @@ h2,
         font-size: 16px; /* Ajusta el tamaño de la fuente */
         line-height: 1.5; /* Ajusta el espaciado entre líneas para mejorar la legibilidad */
         padding: 10px 20px; /* Agrega espacio alrededor del texto */
+        color: #fff;
     }
     .lo-que-ofrecemos-buttons {
         display: flex;
@@ -1010,12 +1153,17 @@ h2,
     .about-2 {
         background-color: #f4f4f4 ;
     }
+    .about-img img {
+        display: block;
+    }
     .about-container {
         display: flex;
         text-align: center;
         justify-content: left;
         align-items: center;
     }
+    
+
     .about-img {
         z-index: 2;
         margin-top: -50px;
@@ -1095,7 +1243,7 @@ h2,
         padding: 2rem;
     }
     .meet-team {
-        margin: 5rem 0 0 5rem;
+        margin: 5rem 0 15rem 5rem;
     }
     .meet-team img {
         max-width: 60px;
@@ -1113,22 +1261,25 @@ h2,
     }
     .team-membres {
         display: flex;
+        flex-direction: row;
+        background-color: #fff;
         gap: 3rem;
-        justify-content: space-between;
-        align-items: flex-start;
         padding: 4rem;
-        margin-top: -110px;
+        margin-top: -140px;
     }
 
     .team-membres > div {
         background-size: cover;
         background-position: center;
         height: 5rem;
+        margin-top: -110px;
         padding: 1rem;
         display: flex;
-        align-items: end;
+        align-items: flex-start;
         position: relative;
         isolation: isolate; 
+        flex-direction: column;
+        justify-content: flex-end;
     }
     .team-membres > div::before {
         content: "";
@@ -1160,6 +1311,7 @@ h2,
     }
     .numeros {
         display: flex;
+        flex-direction: row;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -1174,63 +1326,88 @@ h2,
     .travelled p {
         font-size: 14px;
     }
-    .content-1 {
-        display: grid;
-        grid-template-columns: 4fr 1fr;
-        grid-template-rows: 1fr auto;
-        gap: 20px;
-        padding: 40px;
-        background-color: #fff;
+    .pictures {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        padding: 4rem;
     }
-    
-    .images {
-        display: grid;
-        grid-template-rows: 2fr 2fr;
-        gap: 20px;
+    .pictures img {
+        max-width: 100%;
     }
-    
-    .grill-image, .eating-image, .burger-image {
+    .text-img-pictures {
+        display: flex;
+    }
+    .img-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 19px;
+    }
+    .img-3 img {
+        height: 400px;
+    }
+    .img-2-text img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
-    .images img {
-        max-width: 60px;
-        height: 50px;
+    .img-pictures img {
+        max-width: 100%;
     }
-    .burger-image {
-        grid-column: 2;
-        grid-row: 2 / 3;
-        object-fit: cover;
+    .text h2  {
+        color: #000;
+        font-size: 2rem;
     }
-    .images img {
-        max-width: max-content;
-
+    .text img {
+        width: 45px;
     }
-    .text-content {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-        padding: 20px;
+    .text {
+        max-width: 600px;
+        margin: 0 auto;
     }
     
-    .text-content h2 {
-        font-size: 14px;
-        text-transform: uppercase;
-        color: #888;
+    .text p {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .get {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .btn-about a {
+        background: none;
+        border: none;
+        padding: 0;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        text-decoration: none;
     }
     
-    .text-content h1 {
-        font-size: 32px;
-        margin: 10px 0;
-        color: #333;
-    }
-    
-    .text-content p {
+    /* Estilos personalizados */
+    .btn-about a {
+        display: inline-block;
+        background-color: #fff; /* Cambia este color al que prefieras */
+        color: black;
+        padding: 10px 20px;
         font-size: 16px;
-        line-height: 1.5;
-        color: #555;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
     }
-
+    
+    /* Efecto hover */
+    .btn-about a:hover {
+        background-color: #000;
+        color: #fff; 
+        border: 1px solid #fff;
+    }
+    
 
 
 }
@@ -1251,6 +1428,21 @@ h2,
     .menu-categories {
         padding: 0 18rem 0 18rem;
     }
+    .team-membres {
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        gap: 3rem;
+        padding: 4rem;
+        padding-left: 19rem;
+        padding-right: 19rem;
+        margin-top: -140px;
+    }
+    .meet-team {
+        margin-left: 9rem;
+    }
+
+
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1024px)  {
@@ -1298,7 +1490,44 @@ h2,
     .menu-1 img {
         margin-top: 8rem;
     }
+    .lo-que-ofrecemos-1 p {
+        color: #fff;
+    }
     
+    /*------about-----*/
+    .about-img img {
+        display: block;
+        max-width: 100%;
+        padding: 2rem;
+    }
+    .about-1-text {
+        text-align: center;
+    }
+    .features {
+        padding: 2rem;
+        display: flex;
+    }
+    .img-pictures img {
+        max-width: 100%;
+    }
+    .img-2 {
+        display: flex;
+        gap: 12px;
+    }
+    .img-2-text img {
+        height: 600px;
+    }
+    .text {
+        max-width: 400px;
+        align-items: center;
+        justify-content: center;
+    }
+    .get {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
 
 }
 @media only screen and (min-width: 1024px) and (max-width: 1340px)  {
