@@ -555,6 +555,11 @@ h2,
 .text {
     margin-top: 2rem;
 }
+.text img {
+    width: 55px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
 .text h2 {
     color: #000;
     margin-top: 12px;
@@ -1370,6 +1375,7 @@ h2,
     .text p {
         max-width: 500px;
         margin: 0 auto;
+        margin-bottom: 19px;
     }
     .get {
         display: flex;

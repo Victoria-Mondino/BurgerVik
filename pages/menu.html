@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgerVik</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="shortcut icon" href="./images/icono-burger.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="htpps://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+    <div class="hero about">
+        <header class="header">
+            <img class="logo" src="../img/logo-light.png" alt="logo">
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="mobile-menu disabled" id="mobile-menu">
+                <div class="mobile-menu__header">
+                    <img class="logo" src="./img/logo-light.png" alt="">
+                    <button class="close-menu" id="close-menu">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <ul>
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="../pages/menu.html">MENU</a></li>
+                        <li><a href="../pages/catering.html">CATERING</a></li>
+                        <li><a href="../pages/contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="desktop-menu">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="/pages/about.html">ABOUT</a></li>
+                    <li><a href="./pages/menu.html">MENU</a></li>
+                    <li><a href="./pages/catering.html">CATERING</a></li>
+                    <li><a href="./pages/contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="hero__content">
+            <div class="hero__content-title">
+                <h2>About</h2>
+                <h3>Learn about our history</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-menu">
+        <div class="banner-menu">
+            <img src="" alt="">
+        </div>
+
+        <h1 class="title-menu">Nuevos productos</h1>
+
+        <div class="product-grid">
+
+            <div class="product-grid__item">
+                <div class="product-grid__imagen">
+                    <img src="" alt="">
+                </div>
+
+                <div class="product-grid__info">
+                    <p class="product-grid__name">Hamburguesa</p>
+                    <p class="product-grid__prince">$9.00</p>
+                    <a href="#" class="product-grid__btn btn-default">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product-grid__item">
+                <div class="product-grid__imagen">
+                    <img src="" alt="">
+                </div>
+
+                <div class="product-grid__info">
+                    <p class="product-grid__name">Hamburguesa</p>
+                    <p class="product-grid__prince">$9.00</p>
+                    <a href="#" class="product-grid__btn btn-default">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product-grid__item">
+                <div class="product-grid__imagen">
+                    <img src="" alt="">
+                </div>
+
+                <div class="product-grid__info">
+                    <p class="product-grid__name">Hamburguesa</p>
+                    <p class="product-grid__prince">$9.00</p>
+                    <a href="#" class="product-grid__btn btn-default">Agregar al carrito</a>
+                </div>
+            </div>
+
+            <div class="product-grid__item">
+                <div class="product-grid__imagen">
+                    <img src="" alt="">
+                </div>
+
+                <div class="product-grid__info">
+                    <p class="product-grid__name">Hamburguesa</p>
+                    <p class="product-grid__prince">$9.00</p>
+                    <a href="#" class="product-grid__btn btn-default">Agregar al carrito</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="modal" id="jsModalCarrito">
+            <div class="modal__container">
+                <button type="button" class="modal__close fa-solid fa-xmark jsModal"></button>
+                <div class="modal__info">
+                    <div class="modal__header">
+                        <h2><i class="fa-brands fa-opencart"></i>Carrito</h2>
+                    </div>
+                    <div class="modal__body">
+                        <div class="modal__list">
+                            <div class="modal__item">
+                                <div class="modal__thumb">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="modal__text-product">
+                                    <p>naranja</p>
+                                    <p><strong>$9.00</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="modal__item">
+                                <div class="modal__thumb">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="modal__text-product">
+                                    <p>naranja</p>
+                                    <p><strong>$9.00</strong></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal__footer"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+    
+
+
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="logo-footer">
+                <img src="../img/007-burger-1.png" alt="Burger Icon">
+                <span>BurgerTruck</span>
+            </div>
+            <p>Hamburguesas fabulosas desde 2015</p>
+            <div class="newsletter">
+                <input type="email" placeholder="Ingresa tu email para unirte a nuestra lista de correo">
+                <button>Iniciar sesión →</button>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
