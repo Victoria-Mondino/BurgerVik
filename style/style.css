@@ -1596,10 +1596,10 @@ h2,
         height: 400px;
     }
     .img-2-text img {
-        width: 100%;
+        max-width: 300px;
     }
     .img-pictures img {
-        max-width: 100%;
+        max-width: 500px;
     }
     .text h2  {
         color: #000;
@@ -1659,7 +1659,7 @@ h2,
 
 
 
-    .menu {
+    .menu-pagina {
         background-image: url(../img/zac-cain-jlzukaj_phq-unsplash.jpg);
         background-size: cover;
         background-position: center;
@@ -1670,7 +1670,7 @@ h2,
         position: relative;
         isolation: isolate;
     }
-    .menu::before {
+    .menu-pagina::before {
         content: "";
         position: absolute;
         inset: 0;
