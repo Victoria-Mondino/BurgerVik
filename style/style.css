@@ -464,8 +464,10 @@ h2,
     color: #000;
 }
 .features {
+    flex-direction: column;
+    text-align: center;
     margin-top: 2rem;
-    padding: 2rem;
+    padding: 4rem;
 }
 .feature-item {
     margin-bottom: 4rem;
@@ -913,8 +915,103 @@ button {
 button:hover {
     background-color: #444;
 }
+/*-- PAGINA CONTACTO--------*/
+.contact-section {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.container-contact {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
 
 
+.contact-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 2rem;
+}
+
+.contact-info p, 
+.contact-info ul {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 26px;
+}
+.contact-info p {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-top: 2rem;
+}
+.contact-info p span {
+    font-weight: 400;
+    color: #333;
+}
+.social-links li a i {
+    font-size: 25px;
+    color: #333;
+}
+.contact-info ul {
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.contact-info p a {
+    color: #333;
+    font-weight: 400;
+}
+
+.contact-form {
+    
+    background-color: #fff;
+    padding: 4rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #444;
+}
 /*---footer----*/
 .footer {
     background-color: #f6f4f1;
@@ -1602,6 +1699,7 @@ button:hover {
     /*item factures about */
     .features {
         display: flex;
+        flex-direction: row;
         gap: 6rem;
         text-align: center;
         justify-content: center;
@@ -2224,8 +2322,10 @@ button:hover {
         width: 80%;
         margin: 0 auto;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
+        text-align: left;
     }
     
     .contact-info {
@@ -2248,6 +2348,7 @@ button:hover {
     .social-links {
         list-style: none;
         padding: 0;
+        margin: 0;
         display: flex;
         gap: 26px;
     }
@@ -2255,6 +2356,9 @@ button:hover {
         font-size: 1.2rem;
         font-weight: 800;
         margin-top: 2rem;
+    }
+    .contact-info ul {
+        justify-content: left;
     }
     .contact-info p span {
         font-weight: 400;
@@ -2268,7 +2372,6 @@ button:hover {
         color: #333;
         font-weight: 400;
     }
-    
     .contact-form {
         width: 50%;
         background-color: #fff;
@@ -2310,6 +2413,9 @@ button:hover {
     .contact-form button:hover {
         background-color: #444;
     }
+    .contact-lo-que-ofrecemos {
+        background-image: url(../img/call-me-hangry-hp9vpvgq-wa-unsplash.jpg);
+    }
 
 
 
@@ -2345,7 +2451,7 @@ button:hover {
     .meet-team {
         margin-left: 9rem;
     }
-    /*----CATERING PAG----*/
+    /*----Contact PAG----*/
     .contact-info {
         margin-left: 15rem;
     }
